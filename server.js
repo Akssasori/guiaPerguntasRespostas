@@ -82,6 +82,63 @@
 //         console.log("Erro ", err)
 //     }
 // })
+// const express = require('express');
+// app = express();
+// const bodyParse = require('body-parser');
+
+// app.use(bodyParse.json());
+// app.use(bodyParse.urlencoded({extended:true}));
+
+// app.get('/',(req,res)=>{
+//     res.json("abriu o servidor")
+// })
+
+// app.listen(4321,function(err){
+// if(!err){
+//     console.log("servidor aberto na porta 4321")
+// }else{
+//     console.log("Ocorreu um erro no servidor")
+// }
+// })
+
+// const express = require('express');
+// const app = express();
+// const bodyParse = require(bodyParse);
+
+// app.use(bodyParse.json());
+// app.use(bodyParse.urlencoded({extend:true}));
+
+// app.get('/',(req,res)=>{
+//     res.json("servidor rodadno")
+// })
+
+// app.listen(4321(function(err){
+//     if(!err){
+//         console.log("Servidor rodando na porta 4321")
+//     }else{
+//         console.log("erro ao rodar o servidor")
+//     }
+// }))
+
+// const express = require('express');
+// const app = express();
+// const bodyParse = require(bodyParse);
+
+// app.use(bodyParse.json());
+// app.use(bodyParse.urlencoded({extend:true}));
+
+// app.get("/",(req,res)=>{
+//     res.json("Entrou")
+// })
+
+// app.listen(4321,function(err){
+//     if(!err){
+//         console.log("Servidor rodando na porta 4321")
+//     }else{
+//         console.log("erro ao rodar o servidor")
+//     }
+// })
+
 
 
 
