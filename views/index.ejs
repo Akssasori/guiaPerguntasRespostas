@@ -1,8 +1,26 @@
 <%- include ('../views/partials/headers'); %>
 <body>
     <%- include ('../views/partials/navbar'); %>
-    <div>
-        <h1>TESTE DE ESTILO</h1>
-    </div>   
+       
+    <div class="container">
+        <hr>
+        <h1> Perguntas </h1>
+        <hr>
+        <a href="/perguntar" class="btn btn-primary"> Perguntar</a>
+        <hr>
+        <% perguntas.forEach(pergunta => { %>
+            <br>
+            <div class="card">
+                <div class="card-body">                   
+                    <h3><%= pergunta.titulo %></h3>                    
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary">Responder</button>
+                </div>
+            </div>        
+        
+        <% }) %>
+
+    </div>
 </body>
 <%- include ('../views/partials/footer'); %>

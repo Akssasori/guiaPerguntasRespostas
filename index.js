@@ -26,7 +26,7 @@ app.use(bodyParser.json());
 
 //rotas
 app.get("/",(req,res) =>{
-    Pergunta.findAll({raw:true}).then(perguntas =>{
+    Pergunta.findAll({raw:true, order:[['id','DESC']]}).then(perguntas =>{
         res.render("index.ejs",{
             perguntas: perguntas
         });
@@ -50,6 +50,30 @@ app.post("/salvarpergunta",(req,res)=>{
         res.redirect("/");
     });
 });
+
+
+
+app.get("/pergunta/:id",(req,res)=>{
+    var id = req.params.id;
+    Pergunta.findOne({
+        where: {id:id}
+    }).then(pergunta => {
+        
+        if(pergunta != undefined){
+            res.render("pergunta.ejs",{
+               pergunta: pergunta 
+            });
+        }else{
+            res.redirect("/");
+        }
+    })
+    .catch(err => {
+        res.status(500).send({
+            message: "Erro: " + err
+        });
+    });
+})
+
 
 
 app.listen(4321,(function(err){
